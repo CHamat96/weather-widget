@@ -5,7 +5,7 @@ const appid = process.env.REACT_APP_API_KEY
 export default function useFetch(endpoint, location){
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState('')
+    const [error, setError] = useState(null)
     
     useEffect(() => {
         const fetchData = async() => {
@@ -17,15 +17,18 @@ export default function useFetch(endpoint, location){
             })
             const response = await fetch(url)
             if(!response.ok){
-                throw new Error(`${response.status}: ${response.statusText}`)
+                throw new Error(`Please only select one of the three cities listed`)
             }
             const apiData = await response.json()
-            setData(apiData)
-            setLoading(false)
+            if(apiData){
+                setData(apiData)
+                setLoading(false)
+            }
         }
         fetchData()
         .catch((err) => {
             setError(err)
+            setLoading(false)
         })
     }, [endpoint, location])
 

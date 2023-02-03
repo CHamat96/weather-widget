@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import { Routes, Route } from 'react-router-dom'
 import WeatherSection from './components/WeatherSection';
 
+
 function App() {
   return (
     <div className="wrapper">

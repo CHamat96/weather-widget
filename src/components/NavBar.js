@@ -36,13 +36,13 @@ export default function NavBar(){
         <NavStyles>
             <ul>
                 <li>
-                    <NavLink to="/" activeclassname="activeLink">Toronto</NavLink>
+                    <NavLink to="/" activeclassname="active">Toronto</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/Madrid" activeclassname="activeLink">Madrid</NavLink>
+                    <NavLink to="/Madrid" activeclassname="active">Madrid</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/Tokyo" activeclassname="activeLink">Tokyo</NavLink>
+                    <NavLink to="/Tokyo" activeclassname="active">Tokyo</NavLink>
                 </li>
             </ul>
         </NavStyles>

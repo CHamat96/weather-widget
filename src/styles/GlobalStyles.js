@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource/raleway/index.css"
+import "@fontsource/raleway"
+import "@fontsource/raleway/600.css"
 import "@fontsource/teko/index.css"
 
 const GlobalStyles = createGlobalStyle`

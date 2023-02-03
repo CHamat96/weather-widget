@@ -31,7 +31,7 @@ export default function Forecast({ location }){
     let forecast = []
     const iconURL = `http://openweathermap.org/img/wn`
 
-    const {data, loading} = useFetch(`forecast`, location)
+    const {data, loading, error} = useFetch(`forecast`, location)
     if(loading){
         return (
             <h2>Loading...</h2>
@@ -45,7 +45,8 @@ export default function Forecast({ location }){
     }).slice(0, 4)
     return (
         <ForecastStyles>
-        {forecast.map((day, index) => {
+        {error ? <h2>{error}</h2> : ''}
+        {forecast.map((day) => {
             let date = new Date(day.dt_txt).toLocaleString(`en-US`, {weekday:"short"})
             let weatherCondition = day.weather[0]
             return (
