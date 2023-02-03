@@ -36,9 +36,5 @@ To run the project, you will need an API Key from the OpenWeatherMap API
 Once you have an API Key, create an `.env` file in the root of the project folder, then store your API Key as the environment variable `REACT_APP_API_KEY` 
 ## Deployment
 
-To deploy this project run
-
-```bash
-  npm run build
-```
+The site is setup to auto-deploy from the `main` branch through Netlify
 
