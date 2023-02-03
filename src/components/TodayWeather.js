@@ -38,10 +38,15 @@ export default function TodayWeather({ location }){
             <h2>Loading...</h2>
         )
     }
+    if(error){
+        const errorMessage = `${error}`
+        return (
+            <h2>{errorMessage}</h2>
+        )
+    }
     const weatherCondition = data.weather[0]
         return (
             <TodayStyles>
-                {error ? <h2>{error}</h2> : ''}
                 <h2>Today</h2>
                 <div className="weatherDetails">
                     <div className="weatherFlex">
