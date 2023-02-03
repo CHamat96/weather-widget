@@ -16,7 +16,7 @@ const TodayStyles = styled.div`
         justify-content:center;
     }
     img {
-        max-width:250px;
+        max-width:300px;
     }
     .weatherDetails {
         text-align:left;
@@ -50,7 +50,7 @@ export default function TodayWeather({ location }){
                 <h2>Today</h2>
                 <div className="weatherDetails">
                     <div className="weatherFlex">
-                        <img src={`${iconURL}/${weatherCondition.icon}.png`} alt={weatherCondition.description} />
+                        <img src={`${iconURL}/${weatherCondition.icon}@4x.png`} alt={weatherCondition.description} />
                         <div>
                             <p className="temp todayTemp">
                                 {data.main.temp}&deg;
