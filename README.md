@@ -7,7 +7,7 @@ This is a simple widget, built with React, that displays the 5-day weather forec
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/CHamat96/weather-widget
 ```
 
 Go to the project directory
