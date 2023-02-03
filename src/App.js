@@ -5,7 +5,7 @@ import WeatherSection from './components/WeatherSection';
 
 function App() {
   return (
-    <div className="App">
+    <div className="wrapper">
       <NavBar />
       <Routes>
         <Route path="/" element={<WeatherSection />}/>
