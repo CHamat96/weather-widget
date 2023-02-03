@@ -17,6 +17,7 @@ export default function useFetch(endpoint, location){
             })
             const response = await fetch(url)
             if(!response.ok){
+                setLoading(false)
                 throw new Error(`Please only select one of the three cities listed`)
             }
             const apiData = await response.json()
@@ -28,7 +29,6 @@ export default function useFetch(endpoint, location){
         fetchData()
         .catch((err) => {
             setError(err)
-            setLoading(false)
         })
     }, [endpoint, location])
 

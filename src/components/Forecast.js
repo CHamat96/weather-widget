@@ -37,6 +37,12 @@ export default function Forecast({ location }){
             <h2>Loading...</h2>
         )
     }
+    if(error){
+        return (
+            // Leave this part blank b/c there's already the error message displayed in the above component
+         ''
+        )
+    }
     // API Endpoint currently returns the 5 day forecast over 40 3hr increments. Need to filter array to only one entry per day
     forecast = data.list.filter((entry) => {
         const date = entry.dt_txt
