@@ -16,7 +16,7 @@ const TodayStyles = styled.div`
         justify-content:center;
     }
     img {
-        max-width:200px;
+        max-width:250px;
     }
     .weatherDetails {
         text-align:left;
