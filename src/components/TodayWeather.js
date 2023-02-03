@@ -1,8 +1,8 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 
-export default function TodayWeather(){
-    const {data, loading, error } = useFetch('weather', 'Toronto')
+export default function TodayWeather({ location }){
+    const {data, loading, error } = useFetch('weather', location)
     const iconURL = `http://openweathermap.org/img/wn`
     if(loading){
         return (
