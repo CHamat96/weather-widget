@@ -8,6 +8,9 @@ export default function useFetch(endpoint, location){
     const [error, setError] = useState(null)
     
     useEffect(() => {
+        setError(null);
+        setLoading(true);
+        setData(null)
         const fetchData = async() => {
             const url = new URL(`https://api.openweathermap.org/data/2.5/${endpoint}`)
             url.search = new URLSearchParams({
