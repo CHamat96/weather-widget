@@ -26,7 +26,7 @@ export default function Forecast({ location }){
                 <div className="forecastDay" key={day.dt_txt}>
                     <p>{date}</p>
                     <img src={`${iconURL}/${weatherCondition.icon}.png`} alt={weatherCondition.description} />
-                    <p>{day.main.temp}&deg;</p>
+                    <p className="temp">{day.main.temp}&deg;</p>
                 </div>
             )
         })}
