@@ -1,6 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import React from "react";
 import styled from "styled-components";
+import HandleWeatherIcon from "../hooks/HandleWeatherIcon";
 
 const ForecastStyles = styled.div`
     max-width:100%;
@@ -17,20 +18,17 @@ const ForecastStyles = styled.div`
         flex-direction:column;
         align-items:center;
         justify-content:space-around;
-        img {
-            max-width:100px;
-        }
 
         h3 {
             font-size:1.6rem;
         }
+
+
     }
 `
 
 export default function Forecast({ location }){
     let forecast = []
-    const iconURL = `http://openweathermap.org/img/wn`
-
     const {data, loading, error} = useFetch(`forecast`, location)
     if(loading){
         return (
@@ -58,8 +56,9 @@ export default function Forecast({ location }){
             return (
                 <div className="forecastDay" key={day.dt_txt}>
                     <h3>{date}</h3>
-                    <img src={`${iconURL}/${weatherCondition.icon}@4x.png`} alt={weatherCondition.description} />
-                    <p className="temp">{day.main.temp}&deg;</p>
+                    <HandleWeatherIcon 
+                    condition={weatherCondition.description}/>
+                    <p className="temp">{Math.floor(day.main.temp)}&deg;</p>
                 </div>
             )
         })}
