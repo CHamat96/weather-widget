@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
         --lightestBlue:#EEF7FD;
         --lightBlue: #EBF5FB;
         --blue: #39b1ed;
+        --darkBlue: #28436c;
         --cyan:#C4F0F1;
         --darkcyan: #B4DEE3;
 
@@ -32,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background:var(--lightBlue);
+        background:var(--lightestBlue);
         font-family:var(--bodyFont);
         text-align:center;
     }
@@ -78,11 +79,23 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
-    img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
+        .weatherIcon {
+            height:auto;
+            margin:0;
+            svg {
+                display:block;
+                font-size:50px;
+                color:var(--darkBlue);
+            }
+            .todayWeather & {
+                margin-right:55px;
+                svg {
+                    display:block;
+                    font-size:150px;
+                }
+                }
+
+        }
 
 
 `
