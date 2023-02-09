@@ -1,4 +1,4 @@
-import { WiDaySunny, WiThunder, WiDayFog, WiDayHail, WiDaySnow, WiCloudy, WiCloudyWindy, WiStormShowers, WiRain, WiShowers, WiThunderstorm, WiDayCloudy, WiDaySunnyOvercast, WiLightning } from 'react-icons/wi'
+import { WiDaySunny, WiDayFog, WiDayHail, WiDaySnow, WiCloudy, WiCloudyWindy, WiStormShowers, WiRain, WiShowers, WiThunderstorm, WiDaySunnyOvercast, WiLightning } from 'react-icons/wi'
 
 export default function HandleWeatherIcon({ condition }){
   const conditionsArray = ["clear", "rain", "cloudy", "snow", "mist", "fog", "wind", "thunder", "storm", "sunny", "sun", "overcast", "clouds", "lightning"]
@@ -7,7 +7,7 @@ export default function HandleWeatherIcon({ condition }){
     switch (currentCondition) {
         case "clear": return <WiDaySunny />;
         case "rain": return <WiRain />;
-        case "clouds": return <WiDayCloudy />;
+        case "clouds": return <WiCloudy />;
         case "overcast": return <WiDaySunnyOvercast />; 
         case "lightning": return <WiLightning />;
         case "snow": return <WiDaySnow />;
